@@ -1,16 +1,60 @@
-# headspace_test
+# News App Repository
 
-A new Flutter project.
+## Overview
+This project implements a News app using the Clean Architecture approach. It includes data fetching from a remote API, caching mechanisms, and offline support. The repository follows best practices with unit tests for each layer.
 
-## Getting Started
+## Features
+- Fetch news articles from a remote data source.
+- Cache news for offline access.
+- Use the Repository Pattern to manage data sources.
+- Apply the Clean Architecture principles.
+- Unit tests with `mocktail`.
 
-This project is a starting point for a Flutter application.
+## Tech Stack
+- **Flutter** (Dart)
+- **Dio** for HTTP requests
+- **sqflite** for local caching
+- **Equatable** for value equality
+- **Dartz** for functional programming
+- **Mocktail** for testing
 
-A few resources to get you started if this is your first Flutter project:
+## Project Structure
+```
+lib/
+│── core/                # Error handling, network info, utilities
+│── datasources/         # Remote & offline data sources
+│── models/              # Data models
+│── repositories/        # Repository implementations
+│── entities/            # Business logic entities
+│── presentation/        # UI & state management
+│── main.dart            # Entry point
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo/news_app.git
+   ```
+2. Install dependencies:
+   ```sh
+   flutter pub get
+   ```
+3. Run tests:
+   ```sh
+   flutter test
+   ```
+4. Run the app:
+   ```sh
+   flutter run
+   ```
+ 5. flutter version 3.27.1  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Testing
+Unit tests are implemented using `flutter_test` and `mocktail`. To run tests:
+```sh
+flutter test
+```
+
+
+
+
